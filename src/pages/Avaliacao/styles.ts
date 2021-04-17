@@ -1,13 +1,17 @@
 import styled from 'styled-components/native';
 import { Text, TextInput } from 'react-native-paper';
 
+const ContentTitle = styled.View`
+  align-items: center;
+  padding: 30px 0 20px;
+`
+
 const AppTitle = styled.Text`
   font-family: Sans-Serif;
   font-size: 20px;
   color: #1d1d1d;
   text-align: center;
   font-weight: 700;
-  margin-bottom: 20px;
 `
 
 const ListTitle = styled(Text)`
@@ -17,6 +21,7 @@ const ListTitle = styled(Text)`
 
 const TextTitle = styled(Text)`
   font-weight: bold;
+  color: #333333;
 `
 
 const TccTitle = styled(Text)`
@@ -24,6 +29,7 @@ const TccTitle = styled(Text)`
   font-size: 16px;
   font-weight: bold;
   margin: 5px 0;
+  color: #333333;
 `
 
 const TextInfo = styled(Text)`
@@ -41,18 +47,13 @@ const Header = styled.View`
   border-radius: 5px;
 `
 
-
-const Content = styled.ScrollView`
-  padding-right: 10px;
-`
-
 export {
+  ContentTitle,
   AppTitle,
   ListTitle,
   TextTitle,
   TccTitle,
   TextInfo,
   TextArea,
-  Header,
-  Content
+  Header
 }

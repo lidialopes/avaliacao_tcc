@@ -2,18 +2,19 @@ import React, { useState } from 'react';
 
 import { useRoute } from '@react-navigation/native';
 import { AppButton } from '../../components/AppButton';
-import { Container } from '../../components/Container'
-import { Separator } from '../../components/Separator'
+import { Container } from '../../components/Container';
+import { Separator } from '../../components/Separator';
+import { Content } from '../../components/Content';
 
 import {
+	ContentTitle,
 	AppTitle,
 	ListTitle,
 	TextTitle,
 	TccTitle,
 	TextInfo,
 	TextArea,
-	Header,
-	Content
+	Header
 } from './styles';
 
 import { List } from 'react-native-paper';
@@ -45,7 +46,10 @@ const Avaliacao: React.FC = () => {
 
 	return (
 		<Container>
-			<AppTitle>Avaliação de Defesa</AppTitle>
+			<ContentTitle>
+				<AppTitle>Avaliação de Defesa</AppTitle>
+				<TextInfo>Nota: {nota}</TextInfo>
+			</ContentTitle>
 			<Content>
 				<Header>
 					<TccTitle>{tcc.tema}</TccTitle>
@@ -53,7 +57,6 @@ const Avaliacao: React.FC = () => {
 					<TextInfo><TextTitle>Matrícula: </TextTitle>{aluno.matricula}</TextInfo>
 					<TextInfo><TextTitle>Curso: </TextTitle>{aluno.curso}</TextInfo>
 					<TextInfo><TextTitle>Professor: </TextTitle>{professor.nome}</TextInfo>
-					<TextInfo><TextTitle>Nota: </TextTitle>{nota}</TextInfo>
 				</Header>
 
 				<ListTitle>Apresentação Escrita</ListTitle>
@@ -62,7 +65,6 @@ const Avaliacao: React.FC = () => {
 				<TextArea label="Pontos" keyboardType="number-pad"
 					onChangeText={(e) => setNConteudo(Number(e))}
 					onEndEditing={() => calcAvg()}
-					
 				/>
 				<TextArea
 					label="Comentários"
@@ -129,7 +131,7 @@ const Avaliacao: React.FC = () => {
 					scrollEnabled={true}
 				/>
 			</Content>
-
+			
 			<AppButton mode="contained">Enviar</AppButton>
 		</Container>
 	);
