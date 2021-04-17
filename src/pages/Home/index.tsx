@@ -5,6 +5,7 @@ import { useNavigation } from '@react-navigation/native';
 import { Container } from '../../components/Container';
 import { AppButton } from '../../components/AppButton';
 import { Separator } from '../../components/Separator';
+import { Content } from '../../components/Content';
 
 import { tccData } from '../../database/data';
 import { Tcc } from '../../types/Types';
@@ -27,7 +28,7 @@ const Home: React.FC = () => {
 	return (
 		<Container>
 			<AppTitle>Avaliação de TCC</AppTitle>
-			<View style={{ justifyContent: 'space-between', flex: 1 }}>
+			<Content>
 				<TccList
 					keyExtractor={(item: Tcc) => item.id}
 					data={tccData}
@@ -40,13 +41,12 @@ const Home: React.FC = () => {
 							}
 						</TouchableOpacity>
 					)} />
-				{tcc &&
-					<AppButton mode='contained' 
-					onPress={() => handleNavigateToAvaliacao()}>
-						Iniciar avaliação
-					</AppButton>
-				}
-			</View>
+			</Content>
+			<AppButton mode='contained'
+			disabled={!!!tcc}
+			onPress={() => handleNavigateToAvaliacao()}>
+				Iniciar avaliação
+			</AppButton>
 		</Container >
 	)
 }

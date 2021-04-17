@@ -5,6 +5,8 @@ import { Tcc } from '../../types/Types';
 
 const AppTitle = styled(Title)`
   text-align: center;
+	font-weight: bold;
+	margin: 20px 0;
 `
 
 const TccItem = styled.Text`
@@ -15,7 +17,8 @@ const TccItem = styled.Text`
 	const TccItemSelected = styled.Text`
 	padding: 10px 5px;
 	margin: 5px 0;
-	background-color: #eee;
+	background-color: #6200ee;
+	color: white;
 	border-radius: 5px;
 	font-size: 15px;
 `
