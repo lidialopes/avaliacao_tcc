@@ -1,6 +1,10 @@
 import styled from 'styled-components/native';
 import { Text, TextInput } from 'react-native-paper';
 
+const Content = styled.ScrollView`
+  padding: 0 40px;
+`
+
 const ContentTitle = styled.View`
   align-items: center;
   padding: 30px 0 20px;
@@ -37,7 +41,7 @@ const TextInfo = styled(Text)`
 
 const TextArea = styled(TextInput)`
   max-height: 85px;
-  margin-bottom: 10px;
+  margin: 10px 0;
 `
 
 const Header = styled.View`
@@ -48,6 +52,7 @@ const Header = styled.View`
 `
 
 export {
+  Content,
   ContentTitle,
   AppTitle,
   ListTitle,

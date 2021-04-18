@@ -5,12 +5,12 @@ import { useNavigation } from '@react-navigation/native';
 import { Container } from '../../components/Container';
 import { AppButton } from '../../components/AppButton';
 import { Separator } from '../../components/Separator';
-import { Content } from '../../components/Content';
 
 import { tccData } from '../../database/data';
 import { Tcc } from '../../types/Types';
 
 import {
+	Content,
 	AppTitle,
 	TccItem,
 	TccItemSelected,

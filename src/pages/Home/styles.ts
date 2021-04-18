@@ -3,6 +3,10 @@ import { Title } from 'react-native-paper';
 import { FlatList } from 'react-native';
 import { Tcc } from '../../types/Types';
 
+const Content = styled.View`
+  padding: 0 40px;
+`
+
 const AppTitle = styled(Title)`
   text-align: center;
 	font-weight: bold;
@@ -29,6 +33,7 @@ const TccList = styled(FlatList as new () => FlatList<Tcc>)`
 `
 
 export {
+	Content,
 	AppTitle,
 	TccItem,
 	TccItemSelected,
