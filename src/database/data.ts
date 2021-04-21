@@ -1,50 +1,26 @@
 export const tccData = [
 	{
 		id: "1",
-		tema: "A importância do uso da música no aprendizado"
+		tema: "A Utilização do Algoritmo da Bolha para classificar textos.",
+		matricula: "SI118236-21",
+		aluno: "Pedro Carlos Silveira",
+		curso: "SI",
+		professor: "Mauro Lopes Carvalho Silva"
 	},
 	{
 		id: "2",
-		tema: "Como tratar o bullying no ambiente escolar"
+		tema: "Metodologia Ágil de Desenvolvimento de Software.",
+		matricula: "SI118230-02",
+		aluno: "João da Silva",
+		curso: "SI",
+		professor: "Mauro Lopes Carvalho Silva"
 	},
 	{
 		id: "3",
-		tema: "Desenvolvendo a auto-confiança na criança"
-	},
-	{
-		id: "4",
-		tema: "A Alfabetização de Jovens e Adultos"
-	},
-	{
-		id: "5",
-		tema: "Desenvolvendo a auto-confiança na criança"
+		tema: "Novas tendências para análises de segurança corporativa.",
+		matricula: "SI118209-11",
+		aluno: "Maria Oliveira",
+		curso: "SI",
+		professor: "José Carvalho Vieira"
 	}
-]
-
-export const professorData = [
-	{
-		id: "1",
-		nome: "Mauro"
-	},
-	{
-		id: "2",
-		nome: "Eva"
-	},
-	{
-		id: "3",
-		nome: "Osvaldo"
-	},
-	{
-		id: "4",
-		nome: "João Carlos"
-	},
-]
-
-export const alunoData = [
-	{
-		id: "1",
-		nome: "Joao",
-		matricula: "123123",
-		curso: "SI"
-	},
 ]

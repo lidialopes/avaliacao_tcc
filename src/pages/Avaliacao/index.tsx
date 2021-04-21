@@ -19,14 +19,11 @@ import {
 
 import { List, HelperText } from 'react-native-paper';
 
-import { Tcc, Aluno, Professor } from '../../types/Types';
-import { alunoData, professorData } from '../../database/data';
+import { Tcc } from '../../types/Types';
 import { View } from 'react-native';
 
 const Avaliacao: React.FC = () => {
 	const tcc = useRoute().params as Tcc;
-	const aluno = alunoData[0] as Aluno;
-	const professor = professorData[0] as Professor;
 
 	const [nConteudo, setNConteudo] = useState("");
 	const [nRedacao, setNRedacao] = useState("");
@@ -78,10 +75,10 @@ const Avaliacao: React.FC = () => {
 			<Content>
 				<Header>
 					<TccTitle>{tcc.tema}</TccTitle>
-					<TextInfo><TextTitle>Aluno: </TextTitle>{aluno.nome}</TextInfo>
-					<TextInfo><TextTitle>Matrícula: </TextTitle>{aluno.matricula}</TextInfo>
-					<TextInfo><TextTitle>Curso: </TextTitle>{aluno.curso}</TextInfo>
-					<TextInfo><TextTitle>Professor: </TextTitle>{professor.nome}</TextInfo>
+					<TextInfo><TextTitle>Aluno: </TextTitle>{tcc.aluno}</TextInfo>
+					<TextInfo><TextTitle>Matrícula: </TextTitle>{tcc.matricula}</TextInfo>
+					<TextInfo><TextTitle>Curso: </TextTitle>{tcc.curso}</TextInfo>
+					<TextInfo><TextTitle>Professor: </TextTitle>{tcc.professor}</TextInfo>
 				</Header>
 
 				<ListTitle>Apresentação Escrita</ListTitle>
